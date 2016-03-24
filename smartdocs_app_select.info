@@ -1,0 +1,6 @@
+name = SmartDocs App Select
+description = Select an app to use it's apikey in Smartdocs.
+core = 7.x
+version = 7.x-1.0-20160324dev2
+dependencies[] = devconnect_developer_apps
+project path = profiles/apigee/modules/custom/smartdocs_app_select

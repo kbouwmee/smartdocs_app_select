@@ -1,0 +1,47 @@
+<?php
+/**
+ * @file
+ * Code for the Smartdocs App Select feature.
+ */
+
+/**
+ * Implements hook_node_view().
+ */
+function smartdocs_app_select_node_view($node, $view_mode, $langcode) {
+  if ($node->type == 'smart_method' && $view_mode == 'full') {
+    global $user;
+    $app_entities = entity_load('developer_app', FALSE, array('mail' => $user->mail));
+    $options = array();
+    $model = $node->field_smart_method_model[LANGUAGE_NONE][0]['taxonomy_term']->name;
+    
+    // loop over all apps
+    array_walk($app_entities, function ($app) use (&$options, $model) 
+    {
+      // loop over all API Products of this app
+      array_walk($app->apiProducts, function ($apiProduct) use ($app, &$options, $model) 
+      {  
+        // get all models associated for this API Product
+        $models = variable_get('smartdocs_' . $apiProduct . '_docs', array());  
+        
+        // check if model of this node matches with any of this API Product
+        if($app->status == 'approved' && in_array($model, $models)) 
+        {
+          // duplicate models in all apiproducts of app are a possibility -> check if app is not there yet
+          if (!in_array($app->attributes['DisplayName'], $options))
+          {
+              // add this app to the list to be diplayed 
+              $options[$app->consumerKey] = $app->attributes['DisplayName']; 
+          }
+        }
+      });
+      
+    });
+    asort($options);
+    // Yeah, module_name should be included in this.
+    drupal_add_js(array('apigee' => array('user' => array('credentials' => $options))), 'setting');
+    drupal_add_js(drupal_get_path('module', 'smartdocs_app_select') . '/js/smartdocs_app_select.js', array(
+      'scope' => 'footer',
+      'group' => JS_DEFAULT,
+    ));
+  }
+}
