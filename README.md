@@ -10,7 +10,7 @@ This project adds a select list for API Keys to SmartDocs nodes. Developers no l
   * smartdocs_app_select.info
   * smartdocs_app_select.module
   * js/smartdocs_app_select.js 
-3. Upload the handlebars template smartdocs_app_select.hbr to the model Method Template under the settings of the Smartdcos model. Or add it as a the global template under Configuration > Smartdocs > Advanced Settings.
+3. Upload the handlebars template smartdocs_app_select.hbr to the model Method Template under the settings of the Smartdocs model. Or add it as a the global template under Configuration > Smartdocs > Advanced Settings.
 
 ## Configuration
 Make sure you select the API Product/SmartDocs correlation under Configuration > Smartdocs. Only apps are shown with a API Product that has a correlation with the SmartDocs model that the documenation page belongs to.
