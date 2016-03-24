@@ -1,15 +1,15 @@
 #SmartDocs App Select
 
-This project adds a select list for API Keys to SmartDocs nodes. Developer no longer have to cpoy-paste the api keys; they can simply choose the app from the select list. This works for models with the custom attribute security scheme.
+This project adds a select list for API Keys to SmartDocs nodes. Developers no longer have to copy-paste the api keys; they can simply choose the app from the select list. This works for models with the custom attribute security scheme.
 
 ![screenshot](https://github.com/kbouwmee/smartdocs_app_select/blob/master/media/screenshot.png "Screenshot")
 
 ## Installation
-1. Create the following folder: /profiles/apigee/modules/custom/smartdocs_app_select
+1. Create the following folder in your Drupal developer portal: /profiles/apigee/modules/custom/smartdocs_app_select
 2. Move the following files to that folder:
-* smartdocs_app_select.info
-* smartdocs_app_select.module
-* js/smartdocs_app_select.js 
+  * smartdocs_app_select.info
+  * smartdocs_app_select.module
+  * js/smartdocs_app_select.js 
 3. Upload the handlebars template smartdocs_app_select.hbr to the model Method Template under the settings of the Smartdcos model. Or add it as a the global template under Configuration > Smartdocs > Advanced Settings.
 
 ## Configuration
