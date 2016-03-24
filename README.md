@@ -2,7 +2,7 @@
 
 This project adds a select list to SmartDocs nodes when the custom attribute security is the Apikey type security scheme.
 
-(https://github.com/kbouwmee/smartdocs_app_select/blob/master/media/screenshot.png "Screenshot")
+![screenshot](https://github.com/kbouwmee/smartdocs_app_select/blob/master/media/screenshot.png "Screenshot")
 
 ## Installation
 1. Create the following folder: /profiles/apigee/modules/custom/smartdocs_app_select
@@ -15,4 +15,4 @@ This project adds a select list to SmartDocs nodes when the custom attribute sec
 ## Configuration
 Make sure you select the API Product/SmartDocs correlation under Configuration > Smartdocs. Only apps are shown with a API Product that has a correlation with the SmartDocs model that the documenation page belongs to.
 
-(https://github.com/kbouwmee/smartdocs_app_select/blob/master/media/smartdocs_product_correlation.png "Correlate your product with your model)
+![correlation](https://github.com/kbouwmee/smartdocs_app_select/blob/master/media/smartdocs_product_correlation.png "Correlate your product with your model)
