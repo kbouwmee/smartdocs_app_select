@@ -5,7 +5,7 @@ This project adds a select list for API Keys to SmartDocs nodes. Developers no l
 ![screenshot](https://github.com/kbouwmee/smartdocs_app_select/blob/master/media/screenshot.png "Screenshot")
 
 ## Installation
-1. Create the following folder in your Drupal developer portal: /profiles/apigee/modules/custom/smartdocs_app_select
+1. Create the following folder in your Drupal developer portal for the custom moule: /sites/all/modules/custom/smartdocs_app_select
 2. Move the following files to that folder:
   * smartdocs_app_select.info
   * smartdocs_app_select.module
